@@ -8,7 +8,6 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './views/home/home.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

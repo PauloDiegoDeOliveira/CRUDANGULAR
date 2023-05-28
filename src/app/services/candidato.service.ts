@@ -7,24 +7,24 @@ import { Candidato } from '../models/candidato';
   providedIn: 'root'
 })
 export class CandidatoService {
-  elementApiUrl = 'https://sistemashomologacao.suafaculdade.com.br/CandidatosEdd/Api/Candidatos';
+
+  urlApi = 'https://sistemashomologacao.suafaculdade.com.br/CandidatosEdd/Api/Candidatos';
 
   constructor(private http: HttpClient) { }
 
-
   getElements(): Observable<Candidato[]> {
-    return this.http.get<Candidato[]>(this.elementApiUrl);
+    return this.http.get<Candidato[]>(this.urlApi);
   }
 
   createElements(element: Candidato): Observable<Candidato> {
-    return this.http.post<Candidato>(this.elementApiUrl, element);
+    return this.http.post<Candidato>(this.urlApi, element);
   }
 
   editElement(element: Candidato): Observable<Candidato> {
-    return this.http.put<Candidato>(this.elementApiUrl, element);
+    return this.http.put<Candidato>(this.urlApi, element);
   }
 
   deleteElement(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.elementApiUrl}?id=${id}`);
+    return this.http.delete<any>(`${this.urlApi}?id=${id}`);
   }
 }

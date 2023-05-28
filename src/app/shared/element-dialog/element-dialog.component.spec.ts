@@ -6,14 +6,10 @@ describe('ElementDialogComponent', () => {
   let component: ElementDialogComponent;
   let fixture: ComponentFixture<ElementDialogComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ElementDialogComponent ]
-    })
-    .compileComponents();
-  });
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [ElementDialogComponent]
+    });
     fixture = TestBed.createComponent(ElementDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
