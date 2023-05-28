@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
     const dialogRef = this.dialog.open(ElementDialogComponent, {
       width: '260px',
       data: element === null ? {
-
         nome_Categoria: '',
         descricao_Categoria: null,
         status_Categoria: ''
