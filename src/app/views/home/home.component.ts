@@ -32,12 +32,12 @@ export class HomeComponent implements OnInit {
 
   openDialog(element: Categoria | null): void {
     const dialogRef = this.dialog.open(ElementDialogComponent, {
-      width: '250px',
+      width: '260px',
       data: element === null ? {
-        position: null,
-        name: '',
-        weight: null,
-        symbol: ''
+
+        nome_Categoria: '',
+        descricao_Categoria: null,
+        status_Categoria: ''
       } : {
         id_Categoria: element.id_Categoria,
         nome_Categoria: element.nome_Categoria,
