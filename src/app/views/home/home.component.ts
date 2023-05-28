@@ -14,7 +14,7 @@ import { ElementDialogComponent } from 'src/app/shared/element-dialog/element-di
 export class HomeComponent implements OnInit {
   @ViewChild(MatTable)
   table!: MatTable<any>;
-  displayedColumns: string[] = ['id_Categoria', 'nome_Categoria', 'descricao_Categoria', 'status_Categoria'];
+  displayedColumns: string[] = ['id_Categoria', 'nome_Categoria', 'descricao_Categoria', 'status_Categoria', 'actions'];
   dataSource!: Categoria[];
 
   constructor(
