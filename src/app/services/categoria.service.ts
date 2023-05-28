@@ -24,7 +24,7 @@ export class CategoriaService {
     return this.http.put<Categoria>(this.urlApi, element);
   }
 
-  deleteElement(id: number): Observable<any> {
+  deleteElement(id: number): Observable<Categoria> {
     return this.http.delete<any>(`${this.urlApi}?id=${id}`);
   }
 }
