@@ -4,6 +4,7 @@ import { MatTable } from '@angular/material/table';
 import { Categoria } from 'src/app/models/categoria';
 import { CategoriaService } from 'src/app/services/categoria.service';
 import { ElementDialogComponent } from 'src/app/shared/element-dialog/element-dialog.component';
+import { Status } from '../../core/enum/status.enum';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ export class HomeComponent implements OnInit {
   table!: MatTable<any>;
   displayedColumns: string[] = ['id_Categoria', 'nome_Categoria', 'descricao_Categoria', 'status_Categoria', 'actions'];
   dataSource!: Categoria[];
+  status = Status;
 
   constructor(
     public dialog: MatDialog,
