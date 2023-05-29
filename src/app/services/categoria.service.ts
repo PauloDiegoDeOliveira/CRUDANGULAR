@@ -21,10 +21,10 @@ export class CategoriaService {
   }
 
   editElement(element: Categoria): Observable<Categoria> {
-    return this.http.put<Categoria>(this.urlApi, element);
+    return this.http.put<Categoria>(`${this.urlApi}/${element.id_Categoria}`, element);
   }
 
   deleteElement(id: number): Observable<Categoria> {
-    return this.http.delete<any>(`${this.urlApi}?id=${id}`);
+    return this.http.delete<any>(`${this.urlApi} / ${id}`);
   }
 }
