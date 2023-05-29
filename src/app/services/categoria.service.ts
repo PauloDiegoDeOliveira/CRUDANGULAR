@@ -25,6 +25,6 @@ export class CategoriaService {
   }
 
   deleteElement(id: number): Observable<Categoria> {
-    return this.http.delete<any>(`${this.urlApi}/${id}`);
+    return this.http.delete<Categoria>(`${this.urlApi}/${id}`);
   }
 }
